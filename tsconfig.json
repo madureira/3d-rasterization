@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "noEmit": true,
+        "strict": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "exclude": ["node_modules"]
+}
