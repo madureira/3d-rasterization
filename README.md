@@ -2,6 +2,8 @@
 
 3D Rasterization implemented in pure javascript, without any external libraries.
 
+## [Live Demo](https://madureira.github.io/3d-rasterization/)
+
 ## Install
 
 ```sh
