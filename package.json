@@ -8,16 +8,13 @@
     "dev": "node server.js",
     "build": "webpack --mode=production"
   },
-  "dependencies": {
-    "pixi.js": "^4.8.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-typescript": "^7.1.0",
-    "@types/pixi.js": "^4.8.6",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
