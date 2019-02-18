@@ -1,16 +1,19 @@
 import { cube, pyramid } from './models';
 import Canvas from './core/canvas';
+import Renderer from './core/renderer';
 import Camera from './core/camera';
-import {createMesh} from './core/mesh';
-import {createRenderer} from './core/renderer';
+import Mesh from './core/mesh';
 
 const canvas: Canvas = new Canvas('.stage', 600, 600);
+const render: Renderer = new Renderer(canvas);
 
-const mesh1 = createMesh(pyramid);
+const mesh1: Mesh = new Mesh(pyramid);
 mesh1.color = '#81ff02';
-const mesh2 = createMesh(cube);
+
+const mesh2: Mesh = new Mesh(cube);
 mesh2.color = '#ff02f0';
-const mesh3 = createMesh(cube);
+
+const mesh3: Mesh = new Mesh(cube);
 mesh3.color = '#ff026d';
 
 const scene = [mesh1, mesh2, mesh3];
@@ -18,8 +21,6 @@ const scene = [mesh1, mesh2, mesh3];
 const camera = new Camera();
 camera.pos.z = 200;
 camera.zoom = 10;
-
-const render = createRenderer(canvas);
 
 function animate(time: number) {
     mesh1.position.x = Math.sin(time / 1000) * 100;
@@ -36,8 +37,8 @@ function animate(time: number) {
     mesh3.position.y = Math.cos(time / 500) * 100;
     mesh3.rotation.y -= 0.005;
 
-    render(scene, camera);
-
+    render.clear();
+    render.render(scene, camera);
     requestAnimationFrame(animate);
 }
 

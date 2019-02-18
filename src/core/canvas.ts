@@ -29,7 +29,6 @@ class Canvas {
   public get height(): number {
     return this._height;
   }
-
 }
 
 export default Canvas;
